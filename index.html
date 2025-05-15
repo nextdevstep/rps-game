@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>🪨📄✂️ Rock Paper Scissors Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🪨📄✂️ Rock Paper Scissors</h1>
+      <p>Welcome! Let's play. Choose your move below!</p>
+    </header>
+
+    <!-- Player Profile -->
+    <div class="profile-section">
+      <label for="playerName">Enter your name:</label>
+      <input type="text" id="playerName" placeholder="Player1" />
+      <button id="startBtn">Start Game</button>
+    </div>
+
+    <!-- Game Area -->
+    <div class="game-section" style="display: none;">
+      <div class="player-move">
+        <h2>Choose your move:</h2>
+        <button class="move-btn" data-move="0">🪨</button>
+        <button class="move-btn" data-move="1">📄</button>
+        <button class="move-btn" data-move="2">✂️</button>
+      </div>
+
+      <!-- Display choices -->
+      <div class="display-area">
+        <div>
+          <h3>You</h3>
+          <div id="playerChoice" class="choice-emoji">❔</div>
+        </div>
+        <div>
+          <h3>Bot</h3>
+          <div id="botChoice" class="choice-emoji">❔</div>
+        </div>
+      </div>
+
+      <!-- Result -->
+      <div id="resultMessage"></div>
+      <div id="botReaction"></div>
+      <button id="playAgainBtn" style="display: none;">Play Again</button>
+
+      <!-- Scoreboard -->
+      <div id="scoreBoard"></div>
+      <div id="streakMessage"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <button id="themeBtn">🎨 Theme</button>
+      <button id="musicBtn">🎵 Music</button>
+      <button id="resetBtn">🔁 Reset</button>
+    </footer>
+  </div>
+
+  <!-- Sounds -->
+  <audio id="clickSound" src="https://freesound.org/data/previews/66/66717_931655-lq.mp3"></audio>
+  <audio id="winSound" src="https://freesound.org/data/previews/341/341695_5260873-lq.mp3"></audio>
+  <audio id="loseSound" src="https://freesound.org/data/previews/256/256113_3263906-lq.mp3"></audio>
+  <audio id="tieSound" src="https://freesound.org/data/previews/256/256114_3263906-lq.mp3"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
